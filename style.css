@@ -28,6 +28,18 @@
 
 }
 
+/* ====== Scroll bar edit ===== */
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: var(--toggle-color);
+}
+
+::-webkit-scrollbar-thumb{
+
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
 body{
     height: 100vh;
     background: var(--body-color);
@@ -43,6 +55,7 @@ body.dark{
     --text-color: #CCC ;
 
 }
+
 
 /* ===== Sidebar ====== */
 .sidebar{
@@ -153,18 +166,7 @@ header .image-text .header-text{
 
 }
 
-.sidebar .search-box{
-    background: var(--primay-color-light) ;
-}
 
-.search-box input{
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    background: var(--primay-color-light) ;
-}
 
 .sidebar li a{
     height: 100%;
@@ -243,7 +245,18 @@ header .image-text .header-text{
     transition: var(--tran-03) ;
 
 }
+/*  ======== main content ======== */
 
+.main-content{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+
+
+/* ====== transition dark mode  */
 body.dark .switch::before{
     left: 24px;
 }
