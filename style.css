@@ -1,5 +1,12 @@
+/* 
+Página Web
+
+Roni Athayde
+22/02/2002
+*/
+
 /* Google Font Import - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -17,7 +24,10 @@
     --primary-color: #695CFE ;
     --primay-color-light: #F6F5FF ;
     --toggle-color: #DDD ; 
+    --title-color: #000;
     --text-color: #707070 ;
+    --main-bg-color: #fff;
+
 
     /* ===== Transition =====  */
 
@@ -31,13 +41,13 @@
 /* ====== Scroll bar edit ===== */
 ::-webkit-scrollbar{
     width: 7px;
-    background-color: var(--toggle-color);
+    background-color: var(--primary-color);
 }
 
 ::-webkit-scrollbar-thumb{
 
     border-radius: 8px;
-    background-color: var(--primary-color);
+    background-color: var(--toggle-color);
 }
 
 body{
@@ -53,6 +63,8 @@ body.dark{
     --primay-color-light: #3A3B3C ;
     --toggle-color: #FFF ; 
     --text-color: #CCC ;
+    --main-bg-color: #18191A;
+    --title-color: #d6d6d6;
 
 }
 
@@ -115,9 +127,35 @@ body.dark{
 }
 
 .sidebar li .icon,
- .sidebar li .text{
+ .sidebar li .text,
+  .midias .icon{
     color: var(--text-color);
     transition: var(--tran-02);   
+}
+.midias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    
+}
+.midias a{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+
+.midias .icon{
+    font-size: 25px ;
+    transition: var(--tran-02); 
 }
 
 .sidebar header{
@@ -177,11 +215,13 @@ header .image-text .header-text{
     border-radius: 6px;
     transition: var(--tran-04) ;
 }
-.sidebar li a:not(.not-hover):hover{
+.sidebar li a:not(.not-hover):hover,
+.midias a:hover{
     background: var(--primary-color);
 }
 .sidebar li a:not(.not-hover):hover .icon,
-.sidebar li a:hover .text{
+.sidebar li a:hover .text,
+.midias a:hover .icon{
     color: var(--sidebar-color);
 }
 
@@ -245,14 +285,7 @@ header .image-text .header-text{
     transition: var(--tran-03) ;
 
 }
-/*  ======== main content ======== */
 
-.main-content{
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-    min-width: 200px;
-}
 
 
 
@@ -260,3 +293,49 @@ header .image-text .header-text{
 body.dark .switch::before{
     left: 24px;
 }
+/* MAIN CONTENT */
+/*  ======== main content ======== */
+
+.main-content{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 6px;
+    box-shadow:0 2px 18px 0 rgba(0,0,0,.3) ;
+    background-color: var(--main-bg-color);
+    padding: 10px;
+}
+
+
+
+
+/* HOME CONTENT*/
+
+.home-content__title{
+    font-size: 44px;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.home-content__title:hover::before{
+    content: '#';
+}
+
+.home-content__content{
+    color: var(--text-color);
+    font-weight: 300;
+    letter-spacing: 1.7px;
+}
+
+/* 
+Próxima task: 
+    adicionar novos conteúdos a home e suas devidas estilizações
+* /
