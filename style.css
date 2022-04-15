@@ -40,6 +40,11 @@ Roni Athayde
 }
 
 /* ====== Scroll bar edit ===== */
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 35px;
+}
 ::-webkit-scrollbar{
     width: 10px;
     background-color: var(--scroll);
@@ -121,7 +126,8 @@ body.dark{
     align-items: center;
 }
 
-.sidebar li .icon{
+.sidebar li .icon,
+    .postct_imgct .icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,7 +163,7 @@ body.dark{
     position: relative;
     width: 50px;
     height: 50px;
-    border-radius: 6px;
+    border-radius: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -167,6 +173,7 @@ body.dark{
     
 }
 .midias .open-midias{
+    margin-top: 5px;
     z-index: 65;
     background: var(--primary-color);
     width: 50px;
@@ -270,12 +277,12 @@ header .image-text .header-text{
     transition: var(--tran-04) ;
 }
 .sidebar li a:not(.not-hover):hover,
-.midias a:hover{
+    .midias a:hover{
     background: var(--primary-color);
 }
 .sidebar li a:not(.not-hover):hover .icon,
-.sidebar li a:hover .text,
-.midias a:hover .icon{
+    .sidebar li a:hover .text,
+        .midias a:hover .icon{
     color: var(--sidebar-color);
 }
 
@@ -365,24 +372,26 @@ body.dark .switch::before{
 }
 
 
+
 /* HOME CONTENT*/
 .home-content{
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: rgba(21, 32, 43, 0.75);
+    background-color: rgba(21, 32, 43, 0.92);
     padding: 2px 2px 0 30px;
     display: flex;
-    flex-direction: column ;
-    margin-bottom: 20px;
-    display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
 }
+
 .home-content__title{
     font-size: 20px;
     font-weight: 900;
     display: block;
-    color: var(--title-color);
+    color: #F6F5FF;
     cursor: pointer;
     
 }
@@ -399,7 +408,38 @@ body.dark .switch::before{
     letter-spacing: 1.7px;
 }
 
+.main-content__wp article{
+    margin-bottom: 30px;
+}
+
+.title-article-nav{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--title-color);
+    margin-bottom: 5px;
+    
+}
+
+.home_nav2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
+
+
+}
+
+.home_nav2-content{
+    font-size: 13px;
+    text-decoration: none;
+    color: #f6f5ff;
+}
+
 /* =============== PAGE 'COMUNIDADE'=================== */
+
+
+/* =============== SEÇÃO 'ESCREVA SUA MENSAGEM' ================ */
 .ct-msg{
     width: 100%;
     display: flex;
@@ -473,12 +513,82 @@ body.dark .switch::before{
  }
 
 
- .hide-share{
+/* =================== SEÇÃO DE POSTAGENS ================== */
+.postct{
+    border-top: 1px solid var(--text-color);
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    padding: 15px 5px 10px 5px;
+}
+
+.postct_imgct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.postct_imgct .icon{
+    cursor: pointer;
+}
+
+.postct_postwp_iconsct{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.postct_postwp_iconsct--wp{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+
+.postct_postwp_iconsct--wp-icon{
+    min-width: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.postct_postwp_iconsct--wp-icon:hover{
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+    
+}
+
+.postct_postwp_iconsct--wp-icon .icon,
+    .postct_imgct .icon{
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.postct_postwp_iconsct--wp-icon:hover .icon{
+    color: var(--sidebar-color);
+}
+
+.postct_postwp_iconsct--wp span{
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.postct_postwp_iconsct--wp:hover span{
+    text-shadow: 0 0 0.2em var(--primary-color), 0 0 0.2em var(--primary-color),
+        0 0 0.2em var(--primary-color)
+}
+
+
+
+/* =============== Classes tratadas por JAVASCRIPT ============== */
+ .js-hide-share{
      opacity: 0;
      visibility: hidden;
  }
 
- .display-share{
+ .js-display-share{
      opacity: 1;
      visibility: visible;
  }

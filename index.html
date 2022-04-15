@@ -122,59 +122,74 @@ Roni Athayde
             <main class="main-content">
                
                     <section class="home-content">
-                        <h1 class="home-content__title">
-                            Página Inicial
-                        </h1>
+                        <div>
+                            <h1 class="home-content__title">
+                                Página Inicial
+                            </h1>
+                        </div>
+
+                        <div class="home_nav2">
+                            <a href="#sobrenos" class="home_nav2-content">Sobre nós</a>
+                            <a href="#novasnotificacoes" class="home_nav2-content">Novas Notificações</a>
+                            <a href="#assuntos" class="home_nav2-content">Assuntos</a>
+                            <a href="#comunidade" class="home_nav2-content">Comunidade</a>
+
+                        </div>
+
 
                     </section>
 
-                        <div class=".main-content__wp">
+                        <div class="main-content__wp">
+
+                            <!-- ============= SOBRE NOS ============== -->
                             <article>
-                                <h2 class="title-article-nav"> Sobre nós</h2>
+                                <a id="sobrenos" class="title-article-nav" href=""> <h2 > Sobre nós</h2> </a>
                                 <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
                                 </p>
                                 <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
                                 <p>Abominando qualquer tipo de Fake News!</p>
                             </article>
                 
-                
+                            <!-- ==================== NOVAS NOTIFICAÇÕES ================ -->
                             <article>
-                                <h2 class="title-article-nav"> Novas Notificações</h2>
+                                <a id="novasnotificacoes" class="title-article-nav" href="">  <h2 class="title-article-nav"> Novas Notificações</h2> </a>
+                                <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
+                                </p>
+                                <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
+                                <p>Abominando qualquer tipo de Fake News!</p>
+                            </article>
+                            
+                            <!-- ================== EXCLUIR -->
+                            <article>
+                                <a id="novasnotificacoes" class="title-article-nav" href=""> <h2 class="title-article-nav"> Novas Notificações</h2> </a>
                                 <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
                                 </p>
                                 <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
                                 <p>Abominando qualquer tipo de Fake News!</p>
                             </article>
                 
+                            <!-- ============= ASSUNTOS MAIS BEM VINDOS =============== -->
                             <article>
-                                <h2 class="title-article-nav"> Novas Notificações</h2>
+                                <a id="assuntos" class="title-article-nav" href=""> <h2 class="title-article-nav"> Assuntos mais bem vistos de hoje</h2> </a>
                                 <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
                                 </p>
                                 <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
                                 <p>Abominando qualquer tipo de Fake News!</p>
                             </article>
                 
-                
+                            <!-- ============ COMUNIDADE ============= -->
                             <article>
-                                <h2 class="title-article-nav"> Assuntos mais bem vistos de hoje</h2>
-                                <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
+                                <a id="comunidade" class="title-article-nav" href=""> <h2 class="title-article-nav"> Comunidade </h2> </a>
+                                <p>Nós temos uma comunidade forúm totalmente aberta para compartilhar conhecimentos diversos sobre a pandemia e a COVID19.
                                 </p>
                                 <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
-                                <p>Abominando qualquer tipo de Fake News!</p>
+                                <p>Temos uma flexibilidade muito grande em questão a assuntos abordados no site porém o objetivo é sempre estar focado na pandemia e na COVID19</p>
+                                <p>Caso encontre algum tipo de atividade suspeita, preconceito, crime ou Fake News por favor denuncie!</p>
                             </article>
                 
-                
+                            <!-- ============== ARRUMAR UTILIDADE -->
                             <article>
-                                <h2 class="title-article-nav"> Comunidade </h2>
-                                <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
-                                </p>
-                                <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
-                                <p>Abominando qualquer tipo de Fake News!</p>
-                            </article>
-                
-                
-                            <article>
-                                <h2 class="title-article-nav"> Sobre nós</h2>
+                                <a id="sobrenos" class="title-article-nav" href=""> <h2 class="title-article-nav"> Sobre nós</h2> </a>
                                 <p>A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
                                 </p>
                                 <p>Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
@@ -183,25 +198,25 @@ Roni Athayde
                         </div>
 
 
-                        s
+                        
                     </main> 
 
                     <div  id="share-icons-wrapper"  class="midias">
                         <div class="open-midias"  >
-                            <i class='bx bxs-message-square-add icon'></i>
+                            <i class='bx bx-share-alt icon'></i>
                         </div>
 
                         <div class="midias-wrapper">
-                            <a class="icons-midia hide-share" href="#">
+                            <a class="icons-midia js-hide-share" href="#">
                                 <i class='bx bxl-github icon'></i>
                             </a>
-                            <a class="icons-midia hide-share" href="#">
+                            <a class="icons-midia js-hide-share" href="#">
                                 <i class='bx bxl-twitter icon' ></i>
                             </a>
-                            <a class="icons-midia hide-share" href="#">
+                            <a class="icons-midia js-hide-share" href="#">
                                 <i class='bx bxl-instagram icon' ></i>
                             </a>
-                            <a class="icons-midia hide-share" href="#">
+                            <a class="icons-midia js-hide-share" href="#">
                                 <i class='bx bxl-whatsapp icon' ></i>
                             </a>
                         </div>
