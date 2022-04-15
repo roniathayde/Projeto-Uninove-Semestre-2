@@ -81,6 +81,7 @@ body.dark{
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
+    z-index: 30;
 }
 
 .sidebar.close{
@@ -103,6 +104,7 @@ body.dark{
 
 .sidebar.close .text{
     opacity: 0;
+    visibility: hidden;
 }
 
 .sidebar .image{
@@ -137,26 +139,22 @@ body.dark{
 }
 .midias{
     position: fixed;
-    left: 150px;
+    right: 150px;
     bottom: 100px;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-around;
-    flex-wrap: wrap;
     width: 50px;
     margin-top: 50px;
-    align-items: center;
-    height: 50px;
-
-    
+    align-items: center;  
 }
 
+
 .midias a{
-    opacity: 0;
+
     display: none;
-    position: absolute;
+    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 6px;
@@ -165,28 +163,27 @@ body.dark{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: opacity 1s ease-in-out 0.8;
+    transition: all 1s ease-in-out 0.8;
     
 }
-.midias div{
-    position: absolute;
+.midias .open-midias{
     z-index: 65;
-    background: var(--sidebar-color);
+    background: var(--primary-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     
 }
-.midias:hover a{
-    position: relative;
-    opacity: 1;
-    transform: translateX(50px);
+
+.midias .open-midias i{
+    color: var(--scroll);
 }
+
 
 .midias a:nth-child(1){
     transition: all 0.8s ease-in-out;
@@ -208,7 +205,7 @@ body.dark{
 
 .midias .icon{
     font-size: 25px ;
-    transition: var(--tran-02); 
+    transition:  var(--tran-02); 
 }
 
 .sidebar header{
@@ -476,3 +473,12 @@ body.dark .switch::before{
  }
 
 
+ .hide-share{
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ .display-share{
+     opacity: 1;
+     visibility: visible;
+ }
