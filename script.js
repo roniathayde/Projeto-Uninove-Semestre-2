@@ -4,6 +4,7 @@ const body = document.querySelector("body"),
         searchBtn = body.querySelector(".search-box"),
         modeSwitch = body.querySelector(".toggle-switch"),
         modeText = body.querySelector(".mode-text"),
+        mainct = body.querySelector(".main-ct"),
         midias = body.querySelector(".midias");
 var midias2 = document.querySelector(".open-midias");
 var icons = document.querySelectorAll(".icons-midia");
@@ -11,13 +12,20 @@ var icons = document.querySelectorAll(".icons-midia");
 
 
         toggle.addEventListener("click", () =>{
-            sidebar.classList.toggle("close")
-            toggle.classList.toggle("rotate")
+            sidebar.classList.toggle("close");
+            toggle.classList.toggle("rotate");
+
         })
 
         
         modeSwitch.addEventListener("click", () =>{
-            body.classList.toggle("dark")
+            body.classList.toggle("dark");
+
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Light Mode"
+            }else{
+                modeText.innerText = "Dark Mode"
+            }
         })
         
    
@@ -39,4 +47,6 @@ var icons = document.querySelectorAll(".icons-midia");
             }
            
         })
+
+
 

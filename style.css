@@ -26,9 +26,13 @@ Roni Athayde
     --toggle-color: #DDD ; 
     --title-color: #000;
     --text-color: #707070 ;
+    --content: #1d1d1d;
     --main-bg-color: #fff;
     --scroll-bg: #695CFE;
     --scroll: #ddd;
+    --header-sticky: #695cfee1;
+    --header-content: #fff;
+
 
     /* ===== Transition =====  */
 
@@ -69,10 +73,13 @@ body.dark{
     --primay-color-light: #3A3B3C ;
     --toggle-color: #FFF ; 
     --text-color: #CCC ;
+    --content: #575757;
     --main-bg-color: #18191A;
     --title-color: #d6d6d6;
     --scroll-bg: #18191A;
     --scroll: #ddd;
+    --header-sticky: #3a3b3cde;
+    --header-content: #FFF;
 }
 
 
@@ -248,7 +255,7 @@ header .image-text .header-text{
     position: absolute;
     top: 50%;
     right: -25px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
     background: var(--primary-color);
@@ -258,13 +265,18 @@ header .image-text .header-text{
     border-radius: 50%;
     color: var(--toggle-color);
     font-size: 22px;
-    transition: var(--tran-05);
-
+    transition: var(--tran-03);
+    cursor: pointer;
+    
 }
 
-.sidebar header .rotate{
-    transform: rotate(-180deg);
+.sidebar.close header .toggle{
+    transform: translateY(-60%);
 }
+
+
+
+
 
 
 .sidebar li a{
@@ -276,15 +288,25 @@ header .image-text .header-text{
     border-radius: 6px;
     transition: var(--tran-04) ;
 }
+
 .sidebar li a:not(.not-hover):hover,
     .midias a:hover{
     background: var(--primary-color);
 }
+
 .sidebar li a:not(.not-hover):hover .icon,
     .sidebar li a:hover .text,
         .midias a:hover .icon{
-    color: var(--sidebar-color);
+    color: var(--primay-color-light);
 }
+
+body.dark .sidebar li a:not(.not-hover):hover .icon,
+    body.dark .sidebar li a:hover .text,
+        body.dark .midias a:hover .icon{
+    color: var(--text-color);
+}
+
+
 
 .sidebar .menu-bar{
 
@@ -308,12 +330,22 @@ header .image-text .header-text{
 }
 .menu-bar .mode i{
     position: absolute;
+    transition: var(--tran-03);
 
 }
 
 .menu-bar .mode i.sun{
     opacity: 0;
 }
+
+body.dark .menu-bar .mode i.sun{
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon{
+    opacity: 0;
+}
+
 .menu-bar .mode .toggle-switch{
     position: absolute;
     right: 0px;
@@ -322,7 +354,9 @@ header .image-text .header-text{
     justify-content: center;
     height: 100%;
     min-width: 60px;
+    border-radius: 6px;
     cursor: pointer;
+    background-color:var(--primay-color-light) ;
 
 
 }
@@ -354,9 +388,20 @@ header .image-text .header-text{
 body.dark .switch::before{
     left: 24px;
 }
-/* MAIN CONTENT */
-/*  ======== main content ======== */
 
+.main-ct{
+    width: 60%;
+    position: relative;
+    display:flex;
+
+}
+
+/*  ======== main content ======== */
+.father{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .main-content{
     margin: 0 auto;
     width: 100%;
@@ -378,7 +423,7 @@ body.dark .switch::before{
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: rgba(21, 32, 43, 0.92);
+    background-color: var(--header-sticky);
     padding: 2px 2px 0 30px;
     display: flex;
     flex-direction: row;
@@ -391,7 +436,7 @@ body.dark .switch::before{
     font-size: 20px;
     font-weight: 900;
     display: block;
-    color: #F6F5FF;
+    color: var(--header-content);
     cursor: pointer;
     
 }
@@ -402,8 +447,8 @@ body.dark .switch::before{
     
 }
 
-.home-content__content{
-    color: var(--text-color);
+.main-content--text{
+    color: var(--content);
     font-weight: 300;
     letter-spacing: 1.7px;
 }
@@ -433,10 +478,10 @@ body.dark .switch::before{
 .home_nav2-content{
     font-size: 13px;
     text-decoration: none;
-    color: #f6f5ff;
+    color: var(--header-content);
 }
 
-/* =============== PAGE 'COMUNIDADE'=================== */
+/* ================================================================================= PAGE 'COMUNIDADE'=============================================================================== */
 
 
 /* =============== SEÇÃO 'ESCREVA SUA MENSAGEM' ================ */
@@ -444,7 +489,7 @@ body.dark .switch::before{
     width: 100%;
     display: flex;
     padding: 0 16px 0 16px;
-    background-color: white;
+
     flex-direction: row ;
 }
 .ct-msg__ct-image{
@@ -472,6 +517,7 @@ body.dark .switch::before{
     border: none;
     outline: none;
     font-size: 30px;
+    background-color: var(--main-bg-color);
 }
 
 .ct-msgwp__btnwp{
@@ -579,6 +625,223 @@ body.dark .switch::before{
     text-shadow: 0 0 0.2em var(--primary-color), 0 0 0.2em var(--primary-color),
         0 0 0.2em var(--primary-color)
 }
+
+
+/* ============================= ASIDE MORE INFOS ===============================*/
+
+/* .more-info{
+    position: fixed;
+    top: 50px;
+    right: 215px;
+
+} */
+
+.happeningct{
+    width: 100%;
+    max-width: 400px;
+    background: var(--main-bg-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow:0 2px 18px 0 rgb(0 0 0 / 30%);
+}
+.happeningct h2{
+    margin-bottom:15px;
+    color: var(--content);
+}
+
+.happening_wp{
+
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+.happening_wp:hover{
+    background-color: rgb(173, 173, 173);    
+}
+
+.happening_wp__titlect--title{
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--content);
+}
+
+.happening_wp__contentct{
+    width: 90%;
+    margin-bottom:5px;
+
+}
+
+.happening_wp__contentct--content{
+    color: var(--content);
+
+}
+
+.happening_wp__categoryct{
+    margin-bottom: 5px;
+}
+
+.happening_wp__categoryct--category{
+    color: var(--content);
+}
+
+@media screen and (max-width: 1310px) {
+    .more-info{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1310px) {
+    .more-info{
+        display: none;
+    }
+
+}
+
+/* ======================================== LOGIN ========================================*/
+button{
+    cursor: pointer;
+}
+
+.loginct{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loginct-wp{
+    padding: 50px 10px;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--main-bg-color) ;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.loginct-wp_closect{
+    display: flex;
+    justify-content: left;
+    padding: 5px 0;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.loginct-wp_iconct{
+    display: flex;
+    justify-content: center;
+}
+
+
+.loginct-wp_iconct .icon{
+        color: var(--primary-color);
+}
+
+.loginct-wp_dices{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-login{
+    font-size: 31px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.options-loginct{
+    display: flex;
+    flex-direction: column;
+}
+
+.options-loginct--btn{
+    display: flex;
+    border-radius: 20px;
+    padding: 6px 42px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 0.5px solid #bebebe;
+}
+
+.bxl-google{
+    color:#1d9bf0;
+}
+
+.options-loginct--btn .icon,
+    .loginct-wp_closect .icon,
+        .loginct-wp_iconct .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.login-or{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.form-login input{
+    padding: 8px 10px ;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #bebebe;
+    margin-bottom: 10px;
+}
+
+.login-sumitct{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-sumitct--next{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 6px 62px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 0.5px solid #bebebe;
+}
+
+.login-sumitct--forgot{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 6px 62px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 0.5px solid #bebebe;
+}
+
+
+
+
 
 
 
