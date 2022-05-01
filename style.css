@@ -134,7 +134,8 @@ body.dark{
 }
 
 .sidebar li .icon,
-    .postct_imgct .icon{
+    .postct_imgct .icon,
+        .notification-iconct .icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,6 +439,7 @@ body.dark .switch::before{
     display: block;
     color: var(--header-content);
     cursor: pointer;
+    text-decoration: none;
     
 }
 
@@ -650,7 +652,6 @@ body.dark .switch::before{
 }
 
 .happening_wp{
-
     border-bottom: 1px solid gray;
     margin-bottom: 10px;
     cursor: pointer;
@@ -839,6 +840,111 @@ button{
     border: 0.5px solid #bebebe;
 }
 
+
+
+
+/* ====================== NOTIFICAÇÕES ============================= */
+
+.notifications-items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.notifications-items:hover{
+    background-color: rgba(0, 0, 0, 0.119);    
+}
+
+.dark .notifications-items:hover{
+    background-color: rgba(255, 255, 255, 0.03);    
+}
+
+.notification-iconct .icon,
+    .not-infoct_imgwp .icon{
+    color: var(--text-color);
+    transition: var(--tran-02);
+    font-size: 20px;
+}
+
+.not-infoct_categoryct--category{
+    font-size: 15px;
+    color: var(--content);
+}
+
+.not-infoct_abstractct{
+    margin-top: 10px;
+}
+.not-infoct_abstractct--abstract{
+    font-size: 14px;
+    color: var(--content);
+}
+
+
+/* ====================== MENSAGENS ============================= */
+
+.msgct{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: var(--tran-03);
+    margin-top: 5px;
+
+}
+
+.msgct:hover{
+    background-color: rgba(0, 0, 0, 0.119);    
+}
+
+.msgct-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.msgct__imagect .icon,
+    .msgct__morect .icon{
+    color: var(--text-color);
+    transition: var(--tran-02);
+    font-size: 20px;
+}
+
+.msgct__imagect{
+    margin-right: 5px;
+}
+
+.msgct__infoct--name p{
+    font-size: 15px;
+    color: var(--content);
+}
+
+.msgct__infoct__msgct{
+    margin-top: 10px;
+}
+.msgct__morect span{
+    color: var(--content);
+    margin-right: 5px;
+}
+
+.msgct__morect .icon{
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.msgct__morect .icon:hover{
+    text-shadow: 1vw 1vw 1vw #000, 0 0 3vw #ff0000, 0 0 3vw #ff0000, 0 0 3vw #ff0000;
+    color: rgb(255, 88, 88);
+
+}
+
+.msgct__infoct__msgct--msg{
+    font-size: 14px;
+    color: var(--content);
+}
 
 
 

@@ -5,19 +5,15 @@ const body = document.querySelector("body"),
         modeSwitch = body.querySelector(".toggle-switch"),
         modeText = body.querySelector(".mode-text"),
         mainct = body.querySelector(".main-ct"),
-        midias = body.querySelector(".midias");
-var midias2 = document.querySelector(".open-midias");
-var icons = document.querySelectorAll(".icons-midia");
-
-
+        midias = body.querySelector(".open-midias"),
+        icons = body.querySelectorAll(".icons-midia");
 
         toggle.addEventListener("click", () =>{
             sidebar.classList.toggle("close");
             toggle.classList.toggle("rotate");
 
         })
-
-        
+   
         modeSwitch.addEventListener("click", () =>{
             body.classList.toggle("dark");
 
@@ -28,21 +24,11 @@ var icons = document.querySelectorAll(".icons-midia");
             }
         })
         
-   
+        midias.addEventListener("click", ()=>{
 
-        
-        midias2.addEventListener("click", ()=>{
-
-            if(icons[0].classList[1] == ("js-hide-share")){
-                for(var i = 0; i < icons.length; i++){
-                    icons[i].classList.remove("js-hide-share")
-                    icons[i].classList.add("js-display-share")
-                    
-                }
-            }else if(icons[0].classList[1] == ("js-display-share")){
-                for(var i = 0; i < icons.length; i++){
-                    icons[i].classList.remove("js-display-share")
-                    icons[i].classList.add("js-hide-share")
+            for(var i = 0; i < icons.length; i++){
+                if(icons[i]){
+                    icons[i].classList.toggle("js-hide-share" || "js-display-share")
                 }
             }
            

@@ -23,6 +23,7 @@ Roni Athayde
     <!-- ============= Boxicons CSS =========== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
+    
     <title> COVID News - PROJETO UNINOVE</title>
 </head>
 <body> 
@@ -53,7 +54,7 @@ Roni Athayde
                     
                     <ul class="menu-links">
                         <li class="nav-link">
-                            <a href="#">
+                            <a href="/index.html" title="Home">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
@@ -65,27 +66,22 @@ Roni Athayde
                             </a>
                         </li> 
                         <li class="nav-link">
-                            <a href="#">
+                            <a href="/notifications.html" title="Notificações">
                                 <i class='bx bx-bell icon' ></i>
                                 <span class="text nav-text">Notificações</span>
                             </a>
                         </li> 
                         <li class="nav-link">
-                            <a href="community.html">
+                            <a href="community.html" title="Comunidade">
                                 <i class='bx bx-chat  icon' ></i>
                                 <span class="text nav-text">Comunidade</span>
                             </a>
                         </li> 
+
                         <li class="nav-link">
-                            <a href="#">
-                                <i class='bx bx-heart icon' ></i>
-                                <span class="text nav-text">Likes</span>
-                            </a>
-                        </li> 
-                        <li class="nav-link">
-                            <a href="#">
-                                <i class='bx bx-wallet icon' ></i>
-                                <span class="text nav-text">Wallets</span>
+                            <a href="/message.html">
+                                <i class='bx bx-envelope icon' ></i>
+                                <span class="text nav-text">Mensagens</span>
                             </a>
                         </li> 
                     </ul>
@@ -95,7 +91,7 @@ Roni Athayde
 
                 <div class="bottom-content">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/login.html">
                             <i class='bx bx-log-out icon' ></i>
                             <span class="text nav-text">Logout</span>
                         </a>
@@ -123,9 +119,9 @@ Roni Athayde
                    
                         <section class="home-content">
                             <div>
-                                <h1 class="home-content__title">
+                                <a href="#top" class="home-content__title">
                                     Página Inicial
-                                </h1>
+                                </a>
                             </div>
     
                             <div class="home_nav2">
@@ -138,9 +134,9 @@ Roni Athayde
     
     
                         </section>
-    
+                        <span id="top"></span>
                         <div class="main-content__wp">
-    
+                               
                                 <!-- ============= SOBRE NOS ============== -->
                                 <article>
                                     <a id="sobrenos" class="title-article-nav" href=""> <h2 > Sobre nós</h2> </a>
@@ -152,21 +148,13 @@ Roni Athayde
                     
                                 <!-- ==================== NOVAS NOTIFICAÇÕES ================ -->
                                 <article>
-                                    <a id="novasnotificacoes" class="title-article-nav" href="">  <h2 class="title-article-nav"> Novas Notificações</h2> </a>
+                                    <a id="novasnotificacoes" class="title-article-nav" href="/notifications.html">  <h2 class="title-article-nav"> Novas Notificações</h2> </a>
                                     <p class="main-content--text">A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
                                     </p>
                                     <p class="main-content--text">Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
                                     <p class="main-content--text">Abominando qualquer tipo de Fake News!</p>
                                 </article>
                                 
-                                <!-- ================== EXCLUIR -->
-                                <article>
-                                    <a id="novasnotificacoes" class="title-article-nav" href=""> <h2 class="title-article-nav"> Novas Notificações</h2> </a>
-                                    <p class="main-content--text">A COVID News trás consigo o dever de atualizar os cidadões de bem e aos especialistas da área sobre a situação do COVID atualmente.
-                                    </p>
-                                    <p class="main-content--text">Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
-                                    <p class="main-content--text">Abominando qualquer tipo de Fake News!</p>
-                                </article>
                     
                                 <!-- ============= ASSUNTOS MAIS BEM VINDOS =============== -->
                                 <article>
@@ -179,7 +167,7 @@ Roni Athayde
                     
                                 <!-- ============ COMUNIDADE ============= -->
                                 <article>
-                                    <a id="comunidade" class="title-article-nav" href=""> <h2 class="title-article-nav"> Comunidade </h2> </a>
+                                    <a id="comunidade" class="title-article-nav" href="/community.html"> <h2 class="title-article-nav"> Comunidade </h2> </a>
                                     <p class="main-content--text">Nós temos uma comunidade forúm totalmente aberta para compartilhar conhecimentos diversos sobre a pandemia e a COVID19.
                                     </p>
                                     <p class="main-content--text">Com o modelo de comunidade todos tem espaço para trocar experiencias e dar dicar sobre sintomas e cuidados.</p>
