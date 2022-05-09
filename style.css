@@ -167,7 +167,6 @@ body.dark{
 
 .midias a{
 
-    display: none;
     position: relative;
     width: 50px;
     height: 50px;
@@ -177,9 +176,11 @@ body.dark{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: all 1s ease-in-out 0.8;
+   
     
 }
+
+
 .midias .open-midias{
     margin-top: 5px;
     z-index: 65;
@@ -430,6 +431,7 @@ body.dark .switch::before{
     flex-direction: row;
     margin-bottom: 20px;
     justify-content: space-between;
+    z-index: 50;
 
 }
 
@@ -579,6 +581,10 @@ body.dark .switch::before{
     cursor: pointer;
 }
 
+.postct_postwp{
+    width: 100%;
+}
+
 .postct_postwp_iconsct{
     width: 100%;
     display: flex;
@@ -625,7 +631,7 @@ body.dark .switch::before{
 
 .postct_postwp_iconsct--wp:hover span{
     text-shadow: 0 0 0.2em var(--primary-color), 0 0 0.2em var(--primary-color),
-        0 0 0.2em var(--primary-color)
+        0 0 0.2em var(--primary-color);
 }
 
 
@@ -869,6 +875,13 @@ button{
     font-size: 20px;
 }
 
+.notification-iconct .icon:hover{
+    text-shadow: 0 0 0.2em var(--primary-color), 0 0 0.2em var(--primary-color),
+        0 0 0.2em var(--primary-color);
+}
+
+
+
 .not-infoct_categoryct--category{
     font-size: 15px;
     color: var(--content);
@@ -936,8 +949,8 @@ button{
 }
 
 .msgct__morect .icon:hover{
-    text-shadow: 1vw 1vw 1vw #000, 0 0 3vw #ff0000, 0 0 3vw #ff0000, 0 0 3vw #ff0000;
-    color: rgb(255, 88, 88);
+    text-shadow: 0 0 0.2em rgb(252, 129, 129), 0 0 0.2em rgb(255, 20, 20),
+        0 0 0.2em rgba(255, 24, 24, 0.6);
 
 }
 
@@ -945,6 +958,77 @@ button{
     font-size: 14px;
     color: var(--content);
 }
+
+
+/* ================= SOBRE ================================== */
+
+.aboutct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.aboutct__imgct{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper{
+    
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+        box-shadow: 0 2px 18px 0 rgb(0 0 0 / 30%);
+}
+
+.aboutct__imgct--img{
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.aboutct__imgct--img:hover{
+    transform: scale(1.1);
+}
+
+
+.aboutct__namect{
+    margin-top: 10px;
+}
+
+.aboutct__namect--name{
+    color: var(--content);
+}
+
+.aboutct__functionct--function{
+    color: var(--content);
+}
+
+.aboutct__abstractct{
+    margin-top: 10px;
+}
+
+.aboutct__abstractct--abstract{
+    text-align: center;
+    color: var(--content);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -955,9 +1039,4 @@ button{
  .js-hide-share{
      opacity: 0;
      visibility: hidden;
- }
-
- .js-display-share{
-     opacity: 1;
-     visibility: visible;
  }
