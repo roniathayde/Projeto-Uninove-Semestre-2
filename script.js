@@ -3,8 +3,8 @@ const body = document.querySelector("body"),
         toggle = body.querySelector(".toggle"),
         modeSwitch = body.querySelector(".toggle-switch"),
         modeText = body.querySelector(".mode-text"),
-        midias = body.querySelector(".open-midias"),
         icons = body.querySelectorAll(".icons-midia");
+
         // menu toggle
         toggle.addEventListener("click", () =>{
             sidebar.classList.toggle("close");
@@ -23,6 +23,8 @@ const body = document.querySelector("body"),
             }
 
         })
+
+        const midias = body.querySelector(".open-midias");
         // midias display/hidden
         midias.addEventListener("click", ()=>{
 
@@ -35,9 +37,9 @@ const body = document.querySelector("body"),
         })
 
             // mensagem exclusão de mensagem
-        var trash = document.querySelectorAll(".bx-trash");
-        var secao = document.querySelectorAll(".msgct");
-        var secaoMsgs = document.querySelector("#maincontentwp");
+        const trash = document.querySelectorAll(".bx-trash");
+        const secao = document.querySelectorAll(".msgct");
+        const secaoMsgs = document.querySelector("#maincontentwp");
         console.log(secaoMsgs)
         
         secao.forEach(function(e,i, arr){
@@ -64,18 +66,27 @@ const body = document.querySelector("body"),
         var iconePost = document.querySelector(".postct_imgct");
         var conteudoPost = document.querySelector(".postct_postwp--content");
         
-        
-
 
         //iteraction on btns
-        var btnLike = document.querySelectorAll(".likepost")
-        var btnComments = document.querySelectorAll(".comments")
-        var btnShare = document.querySelectorAll(".sharepost")
-        console.log(btnLike)
-
-        btnLike.forEach(function(e, i, arr){
+        const btnInteraction = document.querySelectorAll(".postct_postwp_iconsct--wp")
+        var maisUm = 0;
+        btnInteraction.forEach(function(e, i, arr){
             e.addEventListener("click", function(){
-                var numero = document.querySelector(".postct_postwp_iconsct--wp span")
-                console.log(numero.textContent)
+                var numeros = arr[i].querySelectorAll("span")
+                numero = parseInt(numeros[0].innerHTML) 
+                numero += 1;
+                numeros[0].innerHTML = numero
             })
         })
+
+        // function somaUm(n){
+        //     if(maisUm === 0){
+        //         maisUm += 1;
+        //         maisUm =  n + maisUm
+        //     }else if(maisUm === 1){
+        //         maisUm -= 1;
+        //         maisUm = n + maisUm
+        //     }
+        //     return maisUm
+        // };
+        // novo comentario

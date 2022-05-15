@@ -541,7 +541,7 @@ body.dark .switch::before{
     background-color: var(--primary-color);
     border-radius: 30px ;
     padding: 5px 15px 5px 15px;
-    color: var(--sidebar-color);
+    color: white;
     cursor: pointer;
     transition: var(--tran-04) ;
 }
@@ -551,7 +551,7 @@ body.dark .switch::before{
     border: none;
     border-radius: 30px ;
     background-color: var(--primary-color);
-    color: var(--sidebar-color);
+    color: white;
     cursor: pointer;
     box-shadow: 0 2px 18px 0 rgb(0 0 0 / 30%);
     transition: var(--tran-05) ;
@@ -583,6 +583,14 @@ body.dark .switch::before{
 
 .postct_postwp{
     width: 100%;
+}
+
+.postct_postwp--nick{
+    color: var(--content);
+}
+
+.postct_postwp--content{
+    color: var(--content);
 }
 
 .postct_postwp_iconsct{
@@ -946,12 +954,34 @@ button{
 .msgct__morect .icon{
     padding: 4px;
     border-radius: 50%;
+    
 }
 
 .msgct__morect .icon:hover{
     text-shadow: 0 0 0.2em rgb(252, 129, 129), 0 0 0.2em rgb(255, 20, 20),
         0 0 0.2em rgba(255, 24, 24, 0.6);
+        animation-name: trashon;
+        animation-duration: 0.5s;
+    
 
+}
+
+@keyframes trashon {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .msgct__infoct__msgct--msg{
