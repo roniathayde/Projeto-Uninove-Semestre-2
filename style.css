@@ -30,13 +30,14 @@ Roni Athayde
     --main-bg-color: #fff;
     --scroll-bg: #695CFE;
     --scroll: #ddd;
+    --bgprl: #695cfe42;
     --header-sticky: #695cfee1;
     --header-content: #fff;
 
 
     /* ===== Transition =====  */
 
-    --tran-02: all 0.2s ease ;
+    --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
@@ -48,6 +49,8 @@ Roni Athayde
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 35px;
+    height: 100%;
+   
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -61,9 +64,16 @@ html{
 }
 
 body{
-    height: 100vh;
+
     background: var(--body-color);
     transition: var(--tran-04);
+    background-image: url(/Ferramentas/Imagens/parallaximage.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-blend-mode:lighten;
+    background-color: var(--bgprl);
+
     
 }
 body.dark{
@@ -80,6 +90,7 @@ body.dark{
     --scroll: #ddd;
     --header-sticky: #3a3b3cde;
     --header-content: #FFF;
+    --bgprl: #0f0c2ee1;
 }
 
 
@@ -401,8 +412,10 @@ body.dark .switch::before{
 /*  ======== main content ======== */
 .father{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+  
 }
 .main-content{
     margin: 0 auto;
@@ -655,6 +668,7 @@ body.dark .switch::before{
 .happeningct{
     width: 100%;
     max-width: 400px;
+    margin: 0 10px;
     background: var(--main-bg-color);
     padding: 15px;
     border-radius: 10px;
@@ -725,7 +739,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .loginct-wp{
@@ -738,6 +752,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 5px 20px var(--scroll-bg);
 
 }
 
@@ -749,6 +764,12 @@ button{
     top: 15px;
     left: 10px;
     cursor: pointer;
+    
+}
+
+.loginct-wp_closect a{
+    color: black;
+    text-decoration: none;
 }
 
 .loginct-wp_iconct{
@@ -854,7 +875,9 @@ button{
     border: 0.5px solid #bebebe;
 }
 
-
+.login-sumitct--inscribe{
+    color: #333;
+}
 
 
 /* ====================== NOTIFICAÇÕES ============================= */
@@ -865,7 +888,7 @@ button{
     width: 100%;
     padding: 5px 10px;
     cursor: pointer;
-    transition: var(--tran-03);
+    transition: var(--tran-0) ;
 }
 
 .notifications-items:hover{

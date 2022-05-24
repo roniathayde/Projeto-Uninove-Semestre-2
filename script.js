@@ -1,4 +1,4 @@
-const body = document.querySelector("body"),
+var body = document.querySelector("body"),
         sidebar = body.querySelector(".sidebar"),
         toggle = body.querySelector(".toggle"),
         modeSwitch = body.querySelector(".toggle-switch"),
@@ -24,7 +24,7 @@ const body = document.querySelector("body"),
 
         })
 
-        const midias = body.querySelector(".open-midias");
+        var midias = body.querySelector(".open-midias");
         // midias display/hidden
         midias.addEventListener("click", ()=>{
 
@@ -36,10 +36,10 @@ const body = document.querySelector("body"),
            
         })
 
-            // mensagem exclusão de mensagem
-        const trash = document.querySelectorAll(".bx-trash");
-        const secao = document.querySelectorAll(".msgct");
-        const secaoMsgs = document.querySelector("#maincontentwp");
+        // mensagem exclusão de mensagem
+        var trash = document.querySelectorAll(".bx-trash"),
+         secao = document.querySelectorAll(".msgct");
+         secaoMsgs = document.querySelector("#maincontentwp");
         console.log(secaoMsgs)
         
         secao.forEach(function(e,i, arr){
@@ -52,41 +52,35 @@ const body = document.querySelector("body"),
                 
                 if(secaoMsgs.textContent == "\n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                   \n                   \n                "){
                     secaoMsgs.textContent = "Você não tem mensagens!"                
-                   }
+                   } // aguardando refatoração
             });
            });
 
-
-        // community
-        var textArea = document.querySelector("#textarea");
-        var postagem = document.querySelectorAll(".postct");
-        var container = document.querySelector("#postagens")
-        var btnEnviarTexto = document.querySelector("#subPost");
-        var nomePost = document.querySelector(".postct_postwp--nick");
-        var iconePost = document.querySelector(".postct_imgct");
-        var conteudoPost = document.querySelector(".postct_postwp--content");
-        
-
         //iteraction on btns
         const btnInteraction = document.querySelectorAll(".postct_postwp_iconsct--wp")
-        var maisUm = 0;
+        var umNumero = 0;
+        var somaUm = false;
         btnInteraction.forEach(function(e, i, arr){
             e.addEventListener("click", function(){
                 var numeros = arr[i].querySelectorAll("span")
                 numero = parseInt(numeros[0].innerHTML) 
-                numero += 1;
-                numeros[0].innerHTML = numero
+                numeros[0].innerHTML = parseInt(numeros[0].innerHTML) + parseInt(somar(umNumero));
+                
+
             })
         })
 
-        // function somaUm(n){
-        //     if(maisUm === 0){
-        //         maisUm += 1;
-        //         maisUm =  n + maisUm
-        //     }else if(maisUm === 1){
-        //         maisUm -= 1;
-        //         maisUm = n + maisUm
-        //     }
-        //     return maisUm
-        // };
-        // novo comentario
+        // função utilizada para somar +1 ou subtrair -1 aos botões da página comunidade
+        function somar(n){
+            if(!somaUm){
+                somaUm = true;
+                n = 1
+                return n
+            }else if(somaUm){
+                somaUm = false;
+                n = n - 1 ;
+                return n
+            }//aguardando refatoração
+        }
+
+        
