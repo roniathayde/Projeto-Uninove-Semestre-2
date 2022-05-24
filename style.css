@@ -33,6 +33,8 @@ Roni Athayde
     --bgprl: #695cfe42;
     --header-sticky: #695cfee1;
     --header-content: #fff;
+    --midiasicon: #ccc;
+
 
 
     /* ===== Transition =====  */
@@ -90,7 +92,8 @@ body.dark{
     --scroll: #ddd;
     --header-sticky: #3a3b3cde;
     --header-content: #FFF;
-    --bgprl: #0f0c2ee1;
+    --bgprl: #2b2a34e1;
+    --midiasicon: #ccc;
 }
 
 
@@ -154,10 +157,12 @@ body.dark{
     font-size: 20px;
 
 }
+.midias .icon{
+    color: var(--midiasicon);
+}
 
 .sidebar li .icon,
  .sidebar li .text,
-  .midias .icon,
     .ct-msg__ct-image .icon{
     color: var(--text-color);
     transition: var(--tran-02);   
