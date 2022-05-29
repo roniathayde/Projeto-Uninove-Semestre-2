@@ -449,7 +449,7 @@ body.dark .switch::before{
     flex-direction: row;
     margin-bottom: 20px;
     justify-content: space-between;
-    z-index: 50;
+    z-index: 20;
 
 }
 

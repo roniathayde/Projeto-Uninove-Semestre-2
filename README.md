@@ -12,5 +12,4 @@ Uma Comunidade online relacionada a pandemia e ao Covid-19, com objetivo de troc
 - CSS
 - JS
 - GIT
-- GitHub
 

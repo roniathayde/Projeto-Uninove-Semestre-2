@@ -6,23 +6,45 @@ var body = document.querySelector("body"),
         icons = body.querySelectorAll(".icons-midia");
 
         // menu toggle
+
+
+        sidebar.classList.add(localStorage.nav)
         toggle.addEventListener("click", () =>{
             sidebar.classList.toggle("close");
             toggle.classList.toggle("rotate");
 
+            if(sidebar.classList.contains("close")){
+                localStorage.setItem("nav", "close")
+                sidebar.classList.remove("open")
+
+            }else{
+                localStorage.setItem("nav", "open")
+            }
+
         })
+
+       
+
+
+        body.classList.add(localStorage.mode)
         // dark mode
         modeSwitch.addEventListener("click", () =>{
+            
             body.classList.toggle("dark");
 
             if(body.classList.contains("dark")){
                 modeText.innerText = "Light Mode" 
+                localStorage.setItem("mode", "dark")
+
                               
             }else{
                 modeText.innerText = "Dark Mode"   
+                localStorage.setItem("mode", "light")
             }
 
         })
+
+        // social midia
 
         var midias = body.querySelector(".open-midias");
         // midias display/hidden
@@ -40,7 +62,6 @@ var body = document.querySelector("body"),
         var trash = document.querySelectorAll(".bx-trash"),
          secao = document.querySelectorAll(".msgct");
          secaoMsgs = document.querySelector("#maincontentwp");
-        console.log(secaoMsgs)
         
         secao.forEach(function(e,i, arr){
             // no forEach o primeiro valor passado por parametro é o próprio elemento daquele array no momento que esta passando pelo loop!
@@ -83,4 +104,6 @@ var body = document.querySelector("body"),
             }//aguardando refatoração
         }
 
+
+// Desenvolvido por Roni Athayde XD
         
