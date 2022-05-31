@@ -72,16 +72,18 @@ var body = document.querySelector("body"),
                 }         
                 
                 if(secaoMsgs.textContent == "\n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                   \n                   \n                "){
-                    secaoMsgs.textContent = "Você não tem mensagens!"                
+                    secaoMsgs.innerHTML = "<h1 style= 'color:var(--content);'>Você não tem mensagens!</h1>"                
                    } // aguardando refatoração
             });
            });
 
         //iteraction on btns
         const btnInteraction = document.querySelectorAll(".postct_postwp_iconsct--wp")
+        
         var umNumero = 0;
         var somaUm = false;
         btnInteraction.forEach(function(e, i, arr){
+            
             e.addEventListener("click", function(){
                 var numeros = arr[i].querySelectorAll("span")
                 numero = parseInt(numeros[0].innerHTML) 
@@ -93,6 +95,7 @@ var body = document.querySelector("body"),
 
         // função utilizada para somar +1 ou subtrair -1 aos botões da página comunidade
         function somar(n){
+            
             if(!somaUm){
                 somaUm = true;
                 n = 1
