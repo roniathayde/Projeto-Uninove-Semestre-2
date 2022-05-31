@@ -5,6 +5,8 @@ var body = document.querySelector("body"),
         modeText = body.querySelector(".mode-text"),
         icons = body.querySelectorAll(".icons-midia");
 
+
+        
         // menu toggle
 
 
