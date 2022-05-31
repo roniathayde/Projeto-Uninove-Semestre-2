@@ -1,4 +1,4 @@
-var body = document.querySelector("body"),
+const body = document.querySelector("body"),
         sidebar = body.querySelector(".sidebar"),
         toggle = body.querySelector(".toggle"),
         modeSwitch = body.querySelector(".toggle-switch"),
@@ -6,7 +6,7 @@ var body = document.querySelector("body"),
         icons = body.querySelectorAll(".icons-midia");
 
 
-        
+
         // menu toggle
 
 
@@ -48,7 +48,7 @@ var body = document.querySelector("body"),
 
         // social midia
 
-        var midias = body.querySelector(".open-midias");
+        const midias = body.querySelector(".open-midias");
         // midias display/hidden
         midias.addEventListener("click", ()=>{
 
@@ -61,8 +61,8 @@ var body = document.querySelector("body"),
         })
 
         // mensagem exclusão de mensagem
-        var trash = document.querySelectorAll(".bx-trash"),
-         secao = document.querySelectorAll(".msgct");
+        const trash = document.querySelectorAll(".bx-trash"),
+         secao = document.querySelectorAll(".msgct"),
          secaoMsgs = document.querySelector("#maincontentwp");
         
         secao.forEach(function(e,i, arr){
